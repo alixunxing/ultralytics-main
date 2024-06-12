@@ -8,4 +8,4 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 model = YOLO("ultralytics/cfg/models/v8/yolov8n.yaml").load("weights/yolov8n.pt")  # build from YAML and transfer weights
 
 # Train the model
-results = model.train(data="ultralytics/cfg/datasets/medical.yaml", epochs=100, imgsz=640, degrees=180)
+results = model.train(data="ultralytics/cfg/datasets/medical.yaml", epochs=100, imgsz=640, degrees=180, batch=0.8)
